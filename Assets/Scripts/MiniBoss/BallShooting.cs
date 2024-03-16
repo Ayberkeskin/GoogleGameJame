@@ -26,7 +26,7 @@ public class BallShooting : MonoBehaviour
         if (distance < 10)
         {
             timer+= Time.deltaTime;
-            if (timer >= 2)
+            if (timer >= 1)
         {
             timer = 0;
             Shoot();
