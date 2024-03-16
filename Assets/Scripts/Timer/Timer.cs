@@ -8,7 +8,7 @@ public class Timer : MonoBehaviour
     [SerializeField] private float countdownDuration = 10f; // Geri sayım süresi (saniye)
     private float currentTime;
     private TextMeshProUGUI countdownText;
-    private bool _finishTime=false;
+     private bool _finishTime=false;
 
     private void Start()
     {

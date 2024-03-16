@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 
@@ -47,6 +48,23 @@ public class BulletScritp : MonoBehaviour
             }
             Destroy(gameObject);
         }
+        
+        
+        else if (collision.gameObject.CompareTag("Enemy"))
+        {
+            // Düşmana hasar verme işlevini çağır
+            EnemyHealth enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
+            if (enemyHealth != null)
+            {
+                enemyHealth.TakeDamage(10); // Örneğin düşmana 10 hasar ver
+                Debug.Log("Düşmanın kalan canı: " + enemyHealth.health);
+            }
+
+            // Mermiyi yok et
+            Destroy(gameObject);
+        
+        }
+
     }
 
 }
