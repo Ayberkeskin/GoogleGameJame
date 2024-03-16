@@ -497,29 +497,17 @@ BoxCollider2D:
   m_EdgeRadius: 0
 --- !u!1 &927151358
 GameObject:
+  m_CorrespondingSourceObject: {fileID: 5494800536058464241, guid: a7ef085692cfc984db55c8071fe45e1d, type: 3}
+  m_PrefabInstance: {fileID: 4694269931951182979}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1964592181
+Animator:
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 927151361}
-  - component: {fileID: 927151360}
-  - component: {fileID: 927151359}
-  m_Layer: 6
-  m_Name: Square (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!61 &927151359
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 927151358}
+  m_GameObject: {fileID: 1964592175}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
