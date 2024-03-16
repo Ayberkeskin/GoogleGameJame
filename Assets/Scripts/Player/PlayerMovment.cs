@@ -11,6 +11,7 @@ public class PlayerMovment : MonoBehaviour
     
     private float _horizontal;
     private bool _isFacingRight = true;
+    private bool _doubleJump;
 
     [SerializeField] private Rigidbody2D _rb;
     [SerializeField] private Transform _groundCheck;
@@ -36,11 +37,24 @@ public class PlayerMovment : MonoBehaviour
 
     private void Jump()
     {
-        if (Input.GetButtonDown("Jump")&& IsGrounded())
+        if (IsGrounded()&& !Input.GetButton("Jump"))
         {
-            _rb.velocity = new Vector2(_rb.velocity.x, _jumpingPower);
+            _doubleJump = false;
         }
-        /*   eğer ne kadar uzun basarsa o kadar fazla zıplasın istersek bu kodu yorum satırından çıkarıcaz
+        
+        if (Input.GetButtonDown("Jump"))
+        {
+            if (IsGrounded()|| _doubleJump)
+            {
+                _rb.velocity = new Vector2(_rb.velocity.x, _jumpingPower);
+
+                _doubleJump= !_doubleJump;
+            }
+        }
+        /*
+         
+         eğer ne kadar uzun basarsa o kadar fazla zıplasın istersek bu kodu yorum satırından çıkarıcaz
+         
         if (Input.GetButtonUp("Jump")&& _rb.velocity.y>0f)
         {
             _rb.velocity = new Vector2(_rb.velocity.x, _rb.velocity.y * 0.5f);
