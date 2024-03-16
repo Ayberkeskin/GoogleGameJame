@@ -35,10 +35,9 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ball")) // Çarpışma yapılan nesne "Ball" etiketine sahipse
+        if (collision.gameObject.CompareTag("Damage")) // Çarpışma yapılan nesne "Ball" etiketine sahipse
         {
             TakeDamage(1); // Karakterin canını 1 azalt
-            
         }
     }
 }
