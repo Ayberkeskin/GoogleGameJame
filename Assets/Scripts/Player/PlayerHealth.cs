@@ -1,10 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement; // Sahne yönetimi için gerekli ad alanı
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 3; // Maksimum sağlık değeri
     private int currentHealth; // Mevcut sağlık değeri
+
+    [SerializeField] private Image[] healths;
 
     void Start()
     {
@@ -14,6 +17,7 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage; // Karakterin canını azalt
+        healths[currentHealth].enabled = false;
         Debug.Log("Kalan Can: " + currentHealth);
 
         if (currentHealth <= 0)

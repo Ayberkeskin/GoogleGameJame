@@ -34,6 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3119180247704874564}
+  - {fileID: 9139584964257171475}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1301272235987042906
@@ -162,13 +163,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fca1f9f69bafc52419f201700661e734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 8
-  _jumpingPower: 8
   _rb: {fileID: 7295212659388909420}
   _groundCheck: {fileID: 3119180247704874564}
   _groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  _tr: {fileID: 0}
+  _anim: {fileID: 0}
+  _speed: 8
+  _jumpingPower: 8
+  _canDash: 1
+  _isDashnig: 0
+  _dashingPower: 16
+  _dashingTime: 0.2
+  _dashingCooldown: 1
+--- !u!1 &7036738651512770777
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9139584964257171475}
+  m_Layer: 0
+  m_Name: WallCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9139584964257171475
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7036738651512770777}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.503, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7906485257445903394}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7773839075034642180
 GameObject:
   m_ObjectHideFlags: 0
