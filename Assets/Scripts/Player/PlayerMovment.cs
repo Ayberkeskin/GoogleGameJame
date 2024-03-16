@@ -21,13 +21,11 @@ public class PlayerMovment : MonoBehaviour
 
     private bool _canDash = true;
     private bool _isDashnig;
-    private float _dashingPower = 12f;
+    private float _dashingPower = 16f;
     private float _dashingTime = 0.2f;
     private float _dashingCooldown = 1f;
     
 
-  
-  
     void Update()
     {
         if(_isDashnig)
