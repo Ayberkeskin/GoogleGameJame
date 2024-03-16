@@ -6,6 +6,7 @@ public class CameraController : MonoBehaviour
 {
     public Transform hedef; // Oyuncu karakteri veya başka bir nesne
     public float kameraHizi = 5f;
+    
 
     private void Update()
     {
