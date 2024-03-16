@@ -1,31 +1,18 @@
-using System.IO;
 using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public int health = 5; // Düşmanın canı
+    public int health = 100;
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Damage")) // Mermi ile çarpışma kontrolü
-        {
-            TakeDamage(1); // Her mermi çarptığında 1 hasar al
-            Destroy(collision.gameObject); // Mermiyi yok et
-        }
-    }
-
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         health -= damage;
         if (health <= 0)
-        {
-            Die(); // Düşman öldü
+        {   
+
+            Debug.Log("Düşman öldü");
+            // Düşmanı yok et
+            Destroy(gameObject);
         }
-    }
-    
-    void Die()
-    {
-        // Düşmanın ölümüyle ilgili işlemler
-        Destroy(gameObject); // Düşmanı yok et
     }
 }
