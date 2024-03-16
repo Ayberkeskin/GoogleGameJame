@@ -47,20 +47,6 @@ public class BulletScritp : MonoBehaviour
             }
             Destroy(gameObject);
         }
-
-        else if (collision.gameObject.CompareTag("Enemy"))
-        {
-            // Düşmana hasar verme işlevini çağır
-            EnemyHealth enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
-            if (enemyHealth != null)
-            {
-                enemyHealth.TakeDamage(10); // Örneğin düşmana 10 hasar ver
-                Debug.Log("Düşmanın canı: " + enemyHealth.health);
-            }
-            
-            // Mermiyi yok et
-            Destroy(gameObject);
-        }
     }
 
 }
