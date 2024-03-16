@@ -12,6 +12,7 @@ public class PlayerMovment : MonoBehaviour
     [SerializeField] private Transform _groundCheck;
     [SerializeField] private LayerMask _groundLayer;
     [SerializeField] private TrailRenderer _tr;
+    [SerializeField] private Animator _anim;
     #endregion
     
     #region MovementVariables
@@ -56,6 +57,7 @@ public class PlayerMovment : MonoBehaviour
             return;
         
         _rb.velocity = new Vector2(_horizontal * _speed, _rb.velocity.y);
+        _anim.SetFloat("Speed",Mathf.Abs(_horizontal));
     }
 
     private bool IsGrounded()
@@ -65,7 +67,7 @@ public class PlayerMovment : MonoBehaviour
 
     private void Jump()
     {
-        
+        _anim.SetBool("Jump", !IsGrounded());
         if (IsGrounded()&& !Input.GetButton("Jump"))
         {
             _doubleJump = false;
