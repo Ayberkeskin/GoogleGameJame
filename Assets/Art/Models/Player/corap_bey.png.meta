@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 272786cd0987af54ca8c27ba596519e5
+guid: 4ff4e096e8352c348858f05e35895036
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -49,7 +49,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 2860, z: 2867, w: 0}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -136,85 +136,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite-0002_0
+      name: corap_bey_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 2891
-        width: 262
+        x: 30
+        y: 640
+        width: 260
         height: 280
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a35115089e52fc64eaa106ee61c2b940
-      internalID: -36159189
+      spriteID: 620e79e33b33c8b4487581281835cebe
+      internalID: 1797536920
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-0002_1
+      name: corap_bey_1
       rect:
         serializedVersion: 2
-        x: 348
-        y: 2888
-        width: 264
-        height: 264
+        x: 360
+        y: 640
+        width: 250
+        height: 260
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbf9649c16ff84541936c90c0f953bd7
-      internalID: -274449189
+      spriteID: ee7ee3835cfa3a14eaa2cc8e1eba8059
+      internalID: 592661156
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-0002_2
+      name: corap_bey_2
       rect:
         serializedVersion: 2
-        x: 29
-        y: 2559
-        width: 262
-        height: 293
+        x: 30
+        y: 320
+        width: 260
+        height: 290
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a69afc5c7b81c04daf8993c3b2bd3eb
-      internalID: 1661992055
+      spriteID: 8a1737c8384315045a91733237432cfb
+      internalID: 621236945
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-0002_3
+      name: corap_bey_3
       rect:
         serializedVersion: 2
-        x: 348
-        y: 2559
-        width: 264
-        height: 273
+        x: 350
+        y: 320
+        width: 260
+        height: 270
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c83d2b29d1d0a24469b0356b276f42e4
-      internalID: -1509683027
+      spriteID: 518d7df806fd4084fb29669eb197d0ba
+      internalID: 154592257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: corap_bey_4
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 0
+        width: 260
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 584b3059ceb58ca4cb1f39642fdb498f
+      internalID: 1534506499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: corap_bey_5
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 10
+        width: 260
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b29bba906d0acd9429bbcf16d10bfeaa
+      internalID: -1071436202
       vertices: []
       indices: 
       edges: []
@@ -223,17 +265,19 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sprite-0002_0: -36159189
-      Sprite-0002_1: -274449189
-      Sprite-0002_2: 1661992055
-      Sprite-0002_3: -1509683027
+      corap_bey_0: 1797536920
+      corap_bey_1: 592661156
+      corap_bey_2: 621236945
+      corap_bey_3: 154592257
+      corap_bey_4: 1534506499
+      corap_bey_5: -1071436202
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -5,25 +5,35 @@ using UnityEngine;
 
 public class PlayerMovment : MonoBehaviour
 { 
-    [SerializeField]private float _speed=8f;
-    [SerializeField] private float _jumpingPower=12f;
     
-    
+    #region Components
+    [Header("Components")]
     [SerializeField] private Rigidbody2D _rb;
     [SerializeField] private Transform _groundCheck;
     [SerializeField] private LayerMask _groundLayer;
     [SerializeField] private TrailRenderer _tr;
-
+    #endregion
     
+    #region MovementVariables
+    [Header("MovementVariables")]
+    [SerializeField] private float _speed = 8f;
+    [SerializeField] private float _jumpingPower = 12f;
+    #endregion
+    
+    #region InternalVariables
+    [Header("JumpVariables")]
     private float _horizontal;
     private bool _isFacingRight = true;
     private bool _doubleJump;
-
-    private bool _canDash = true;
-    private bool _isDashnig;
-    private float _dashingPower = 16f;
-    private float _dashingTime = 0.2f;
-    private float _dashingCooldown = 1f;
+    
+    
+    [Header("DashVariables")]
+    [SerializeField] private bool _canDash = true;
+    [SerializeField] private bool _isDashnig;
+    [SerializeField] private float _dashingPower = 16f;
+    [SerializeField] private float _dashingTime = 0.2f;
+    [SerializeField] private float _dashingCooldown = 1f;
+    #endregion
     
 
     void Update()
