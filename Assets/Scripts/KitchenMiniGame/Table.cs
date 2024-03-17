@@ -14,5 +14,7 @@ public class Table : MonoBehaviour
          OnTable = true;
          Debug.Log(OnTable);
       }
+
+  
    }
 }
