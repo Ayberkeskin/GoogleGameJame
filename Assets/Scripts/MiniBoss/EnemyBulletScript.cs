@@ -50,10 +50,14 @@ public class BulletScritp : MonoBehaviour
         {
             // Düşmana hasar verme işlevini çağır
             EnemyHealth enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
+            Animator enemyAnimator = collision.gameObject.GetComponent<Animator>();
             if (enemyHealth != null)
             {
+                enemyAnimator.SetTrigger("Hit"); // "Hit" trigger'ını tetikle
                 enemyHealth.TakeDamage(10); // Örneğin düşmana 10 hasar ver
                 Debug.Log("Düşmanın kalan canı: " + enemyHealth.health);
+                enemyAnimator.SetTrigger("nohit"); // "Hit" trigger'ını tetikle
+
             }
 
             // Mermiyi yok et

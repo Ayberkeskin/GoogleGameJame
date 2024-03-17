@@ -598,7 +598,7 @@ Transform:
   m_GameObject: {fileID: 724733462}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.53, y: -0.39, z: 0}
+  m_LocalPosition: {x: -1.89, y: -0.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1522,6 +1522,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: d7345955f14986e418d4f8d3f897f725, type: 3}
+    - target: {fileID: 6027132701886469697, guid: 140a2ad9cbd375e43b2f6a3c53ef7bca, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -2205,6 +2209,8 @@ GameObject:
   - component: {fileID: 1953702437}
   - component: {fileID: 1953702441}
   - component: {fileID: 1953702442}
+  - component: {fileID: 1953702443}
+  - component: {fileID: 1953702444}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Enemy
@@ -2346,6 +2352,42 @@ MonoBehaviour:
   bullet: {fileID: 6417649543554522454, guid: 9caccec7a4db634429dd8654d9447535, type: 3}
   bulletPos: {fileID: 724733463}
   shootingInterval: 1
+--- !u!95 &1953702443
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953702436}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 87d249cdeb36a88479a905db366da1aa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!111 &1953702444
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953702436}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1973403059
 GameObject:
   m_ObjectHideFlags: 0
