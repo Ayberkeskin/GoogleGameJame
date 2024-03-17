@@ -36,8 +36,9 @@ public class EnemyHealth : MonoBehaviour
         if (health <= 0)
         {
             ShowWinMessage();
-            Invoke("LoadNextScene", 2f); // 2 saniye sonra sonraki sahneye geçiş yap
+             // 2 saniye sonra sonraki sahneye geçiş yap
             Destroy(gameObject); // Düşmanı yok et
+            LoadNextScene();
         }
     }
 
@@ -51,6 +52,7 @@ public class EnemyHealth : MonoBehaviour
 
     void LoadNextScene()
     {
-        SceneManager.LoadScene(nextSceneName); // Sonraki sahneye geç
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex + 1);
     }
 }

@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MiniBossBallGame.unity
     guid: e7a5768da35f1c543aca9200f5d77e06
   - enabled: 1
-    path: Assets/Scenes/KitchenMiniGame.unity
-    guid: 4c0e8a8d889fa0f459a73a0f1361f9de
+    path: Assets/Scenes/KitchenScene.unity
+    guid: acd7c96cbf47bc14582d1c65bfa7b369
   m_configObjects: {}

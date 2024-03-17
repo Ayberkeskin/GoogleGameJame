@@ -552,6 +552,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2058701736873587701, guid: 140a2ad9cbd375e43b2f6a3c53ef7bca, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 32c62a1675894c441aea67d84950443b, type: 3}
     - target: {fileID: 3056945705838077159, guid: 140a2ad9cbd375e43b2f6a3c53ef7bca, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -632,6 +636,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3560603329911183458, guid: 140a2ad9cbd375e43b2f6a3c53ef7bca, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 32c62a1675894c441aea67d84950443b, type: 3}
+    - target: {fileID: 3677862563177873228, guid: 140a2ad9cbd375e43b2f6a3c53ef7bca, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 32c62a1675894c441aea67d84950443b, type: 3}
     - target: {fileID: 6651693898930069258, guid: 140a2ad9cbd375e43b2f6a3c53ef7bca, type: 3}
       propertyPath: countdownDuration
       value: 10
