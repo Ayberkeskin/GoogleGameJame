@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,7 @@ public class Knife : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(DestroyAfterDelay());
+      // StartCoroutine(DestroyAfterDelay());
     }
 
     void Update()
@@ -19,11 +20,11 @@ public class Knife : MonoBehaviour
         transform.Translate(Vector2.down * speed * Time.deltaTime);
     }
 
-    IEnumerator DestroyAfterDelay()
+  /*  IEnumerator DestroyAfterDelay()
     {
         yield return new WaitForSeconds(destroyDelay);
         Destroy(gameObject);
-    }
+    }*/
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -36,5 +37,12 @@ public class Knife : MonoBehaviour
             }
             Destroy(gameObject); // Bıçağı yok et
         }
+        
+        if (collision.gameObject.CompareTag("Table")) // Çarpışma yapılan nesne "DestroyArea" etiketine sahipse
+        {
+            Destroy(gameObject); // Bıçağı yok et
+        }
+
     }
+    
 }

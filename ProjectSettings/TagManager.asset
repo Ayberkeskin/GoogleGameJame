@@ -9,6 +9,8 @@ TagManager:
   - Bullet
   - Enemy
   - Table
+  - fruit
+  - Ground
   layers:
   - Default
   - TransparentFX

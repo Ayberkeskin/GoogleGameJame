@@ -10,8 +10,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject borders;
     [SerializeField] private GameObject player;
     public Table table;
-    
-    private float visibilityDuration = 31f; // Görünürlük süresi (saniye)
+
+    public Finish finish;
+    [SerializeField] private GameObject sock;
+    [SerializeField] private GameObject freesock;
+    [SerializeField] private GameObject love;
+
+    private float visibilityDuration = 11f; // Görünürlük süresi (saniye)
 
     void Update()
     {
@@ -26,6 +31,13 @@ public class GameManager : MonoBehaviour
 
             // Belirli bir süre sonra nesnelerin görünürlüğünü kapat
             StartCoroutine(DisableObjectsAfterDelay());
+        }
+
+        if (finish.OnFinish)
+        {
+            sock.SetActive(false);
+            freesock.SetActive(true);
+            love.SetActive(true);
         }
     }
 
