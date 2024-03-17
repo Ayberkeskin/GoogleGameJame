@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/BedRoomScene.unity
+    guid: f3db4faf06eba2d448fd2f171afe71fc
+  - enabled: 1
+    path: Assets/Scenes/MiniBossBallGame.unity
+    guid: e7a5768da35f1c543aca9200f5d77e06
+  - enabled: 1
+    path: Assets/Scenes/KitchenMiniGame.unity
+    guid: 4c0e8a8d889fa0f459a73a0f1361f9de
   m_configObjects: {}
