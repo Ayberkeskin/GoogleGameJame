@@ -186,7 +186,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 51.400784, y: 12.8}
+  m_Size: {x: 321.25, y: 80}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -268,11 +268,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7832619597693926077, guid: a7ef085692cfc984db55c8071fe45e1d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -52.5
+      value: -62.3
       objectReference: {fileID: 0}
     - target: {fileID: 7832619597693926077, guid: a7ef085692cfc984db55c8071fe45e1d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -34.3
+      value: 41.8
       objectReference: {fileID: 0}
     - target: {fileID: 7832619597693926077, guid: a7ef085692cfc984db55c8071fe45e1d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -707,6 +707,7 @@ GameObject:
   - component: {fileID: 618015748}
   - component: {fileID: 618015747}
   - component: {fileID: 618015746}
+  - component: {fileID: 618015749}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -783,11 +784,29 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &618015749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618015745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ac999e7362af2c4181f678059c1160a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hedef: {fileID: 1144687190}
+  kameraHizi: 5
+  minX: -68
+  maxX: 260
+  minY: -40
+  maxY: 40
 --- !u!1 &725148991
 GameObject:
   m_ObjectHideFlags: 0
@@ -1019,6 +1038,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 33.757668, y: 1.5312034}
   m_EdgeRadius: 0
+--- !u!4 &1144687190 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7832619597693926077, guid: a7ef085692cfc984db55c8071fe45e1d, type: 3}
+  m_PrefabInstance: {fileID: 196197511}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1263323990
 GameObject:
   m_ObjectHideFlags: 0

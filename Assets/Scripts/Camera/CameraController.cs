@@ -1,22 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
     public Transform hedef; // Oyuncu karakteri veya başka bir nesne
     public float kameraHizi = 5f;
-    public float minimumX; // Kameranın hareket edebileceği minimum X koordinatı
-    public float maksimumX; // Kameranın hareket edebileceği maksimum X koordinatı
+    public float minX; // Sahnenin minimum X koordinatı
+    public float maxX; // Sahnenin maksimum X koordinatı
+    public float minY; // Sahnenin minimum Y koordinatı
+    public float maxY; // Sahnenin maksimum Y koordinatı
 
     private void Update()
     {
-        // Kameranın hedefi takip etmesi için hedefin Y koordinatını kullan
-        Vector3 yeniPozisyon = new Vector3(hedef.position.x, hedef.position.y, transform.position.z);
-
-        // Kameranın X koordinatını sınırlar içinde tut
-        yeniPozisyon.x = Mathf.Clamp(yeniPozisyon.x, minimumX, maksimumX);
-
+        // Kameranın görüş alanının yarısını hesapla
+        float kameraYuksekligi = Camera.main.orthographicSize;
+        float kameraGenisligi = kameraYuksekligi * Camera.main.aspect;
+        
+        // Kameranın X ve Y koordinatlarını sınırlar içinde tut
+        float sinirlanmisX = Mathf.Clamp(hedef.position.x, minX + kameraGenisligi, maxX - kameraGenisligi);
+        float sinirlanmisY = Mathf.Clamp(hedef.position.y, minY + kameraYuksekligi, maxY - kameraYuksekligi);
+        
+        // Kameranın yeni pozisyonunu ayarla
+        Vector3 yeniPozisyon = new Vector3(sinirlanmisX, sinirlanmisY, transform.position.z);
+        
         // Kameranın pozisyonunu güncelle
         transform.position = Vector3.Lerp(transform.position, yeniPozisyon, kameraHizi * Time.deltaTime);
     }
