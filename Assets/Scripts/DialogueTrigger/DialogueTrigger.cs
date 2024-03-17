@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;  
+using System.Collections;
 
 
 public class DialogueTrigger : MonoBehaviour
@@ -10,24 +11,18 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            dialoguePanel.SetActive(true);
-            LoadNextScene(); // Diyalog kutusunu göster
-            
+            dialoguePanel.SetActive(true); // Oyuncu girdiğinde diyalog kutusunu göster
+            StartCoroutine(LoadNextSceneAfterDelay(15f)); // 4 saniye bekleyip sahneyi yükle
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    
+    IEnumerator LoadNextSceneAfterDelay(float delay)
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            dialoguePanel.SetActive(false); // Oyuncu ayrıldığında diyalog kutusunu gizle
-        }
-    }
-     void LoadNextScene()
-    {
-        // Mevcut sahnenin indeksini al
+        yield return new WaitForSeconds(delay); // Belirtilen süre kadar beklet
+
+        // Mevcut sahnenin indeksini al ve bir sonraki sahneye geç
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        // Mevcut sahne indeksini bir artırarak bir sonraki sahneye geç
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
 }
