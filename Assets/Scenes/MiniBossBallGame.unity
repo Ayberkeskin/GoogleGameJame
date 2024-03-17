@@ -677,7 +677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7832619597693926077, guid: a7ef085692cfc984db55c8071fe45e1d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.99
+      value: -4.26
       objectReference: {fileID: 0}
     - target: {fileID: 7832619597693926077, guid: a7ef085692cfc984db55c8071fe45e1d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2330,7 +2330,6 @@ MonoBehaviour:
   health: 100
   winMessageText: {fileID: 0}
   healthSlider: {fileID: 1339485437}
-  nextSceneName: NextLevel
 --- !u!114 &1953702442
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ public class DialogueTrigger : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             dialoguePanel.SetActive(true); // Oyuncu girdiğinde diyalog kutusunu göster
-            StartCoroutine(LoadNextSceneAfterDelay(15f)); // 4 saniye bekleyip sahneyi yükle
+            StartCoroutine(LoadNextSceneAfterDelay(4f)); // 4 saniye bekleyip sahneyi yükle
         }
     }
 

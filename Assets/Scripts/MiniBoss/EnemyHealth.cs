@@ -8,7 +8,6 @@ public class EnemyHealth : MonoBehaviour
     public int health = 70;
     public TMP_Text winMessageText; // Win message için TextMeshPro referansı
     public Slider healthSlider; // Sağlık çubuğu olarak kullanılacak Slider referansı
-    public string nextSceneName = "NextLevel"; // Geçilecek sonraki sahnenin adı
 
     void Start()
     {
@@ -36,8 +35,8 @@ public class EnemyHealth : MonoBehaviour
         if (health <= 0)
         {
             ShowWinMessage();
-            Invoke("LoadNextScene", 2f); // 2 saniye sonra sonraki sahneye geçiş yap
             Destroy(gameObject); // Düşmanı yok et
+            LoadNextScene(); // Bir sonraki sahneye geç
         }
     }
 
@@ -51,6 +50,8 @@ public class EnemyHealth : MonoBehaviour
 
     void LoadNextScene()
     {
-        SceneManager.LoadScene(nextSceneName); // Sonraki sahneye geç
+        // Mevcut sahnenin indeksini al ve bir sonraki sahneye geç
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex + 1); // Sonraki sahneye geç
     }
 }
