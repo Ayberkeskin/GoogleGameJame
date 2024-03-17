@@ -28,7 +28,7 @@ public class Timer : MonoBehaviour
         {
             // Örneğin: "Geri sayım tamamlandı!" mesajını göster
             _finishTime = true;
-            countdownText.text = "Geri sayım tamamlandı!";
+            countdownText.text = "0";
         }
     }
 }
